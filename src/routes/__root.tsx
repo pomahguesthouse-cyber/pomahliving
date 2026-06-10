@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "Pomah Living" },
       { name: "description", content: "Pomah Living AI is a SaaS platform for smart home and property automation with AI agents." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { property: "og:title", content: "Pomah Living" },
       { property: "og:description", content: "Pomah Living AI is a SaaS platform for smart home and property automation with AI agents." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Pomah Living" },
       { name: "twitter:description", content: "Pomah Living AI is a SaaS platform for smart home and property automation with AI agents." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/33c31cb9-6595-4591-97f7-04b609922617/id-preview-abe86969--acf081c5-fa6f-4d9f-937f-a23ffca5cade.lovable.app-1780914986565.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/33c31cb9-6595-4591-97f7-04b609922617/id-preview-abe86969--acf081c5-fa6f-4d9f-937f-a23ffca5cade.lovable.app-1780914986565.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/5Qu1z4UKkvcNIYafDWtJ5fj5CEg2/social-images/social-1781087575359-Screenshot_2026-06-10_173233.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/5Qu1z4UKkvcNIYafDWtJ5fj5CEg2/social-images/social-1781087575359-Screenshot_2026-06-10_173233.webp" },
     ],
     links: [
       {
