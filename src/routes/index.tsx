@@ -18,8 +18,9 @@ export const Route = createFileRoute("/")({
 function Landing() {
   return (
     <div className="min-h-screen bg-[#d7d0c7] p-3 sm:p-5 lg:p-7 selection:bg-indigo-500/30">
-      <header className="sticky top-3 z-50 overflow-hidden rounded-t-[28px] rounded-b-none border-x border-t border-white/70 bg-[#02050a]/95 shadow-[0_30px_90px_rgba(2,5,10,0.42)] backdrop-blur-2xl sm:top-5 sm:rounded-t-[38px] lg:top-7 lg:rounded-t-[56px]">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.18),transparent_58%)]" />
+      <header className="sticky top-3 z-[999] isolation-isolate overflow-hidden rounded-t-[28px] rounded-b-none border-x border-t border-white/70 bg-[#02050a] shadow-[0_30px_90px_rgba(2,5,10,0.55)] sm:top-5 sm:rounded-t-[38px] lg:top-7 lg:rounded-t-[56px]">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[#02050a]" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.18),transparent_58%)]" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/[0.08]" />
         <div className="relative mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10 lg:py-5">
           <Link to="/" className="flex items-center gap-3 group">
