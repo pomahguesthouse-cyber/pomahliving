@@ -19,7 +19,7 @@ function Landing() {
   return (
     <div className="h-screen overflow-hidden bg-[#d7d0c7] p-3 sm:p-5 lg:p-7 selection:bg-indigo-500/30">
       <div className="flex h-full flex-col overflow-hidden rounded-[28px] sm:rounded-[38px] lg:rounded-[56px] border border-white/70 bg-[#02050a] shadow-[0_35px_100px_rgba(15,23,42,0.35)]">
-        <header className="group/header relative z-[999] shrink-0 isolation-isolate overflow-hidden rounded-t-[28px] rounded-b-none border-b border-white/15 bg-white/[0.075] shadow-[0_28px_90px_rgba(2,5,10,0.32)] backdrop-blur-[34px] backdrop-saturate-200 transition-all duration-500 sm:rounded-t-[38px] lg:rounded-t-[56px]">
+        <header onMouseMove={(event) => { const rect = event.currentTarget.getBoundingClientRect(); event.currentTarget.style.setProperty("--mouse-x", `${event.clientX - rect.left}px`); event.currentTarget.style.setProperty("--mouse-y", `${event.clientY - rect.top}px`); }} className="mouse-glow group/header relative z-[999] shrink-0 isolation-isolate overflow-hidden rounded-t-[28px] rounded-b-none border-b border-white/15 bg-white/[0.075] shadow-[0_28px_90px_rgba(2,5,10,0.32)] backdrop-blur-[34px] backdrop-saturate-200 transition-all duration-500 sm:rounded-t-[38px] lg:rounded-t-[56px]">
           <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white/[0.16] via-white/[0.055] to-white/[0.018]" />
           <div className="pointer-events-none absolute inset-0 -z-10 opacity-45 [background-image:radial-gradient(rgba(255,255,255,0.18)_0.7px,transparent_0.7px)] [background-size:7px_7px]" />
           <div className="pointer-events-none absolute -left-24 -top-28 -z-10 h-48 w-96 rounded-full bg-white/20 blur-3xl transition-opacity duration-700 group-hover/header:opacity-80" />
@@ -59,6 +59,19 @@ function Landing() {
         }
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
+        }
+        .mouse-glow::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 220ms ease;
+          background: radial-gradient(260px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,0.24), rgba(129,140,248,0.16) 28%, transparent 62%);
+        }
+        .mouse-glow:hover::before {
+          opacity: 1;
         }
       `}</style>
     </div>
