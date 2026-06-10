@@ -43,7 +43,7 @@ function Landing() {
           <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_100%,rgba(99,102,241,0.16),transparent_58%)]" />
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/[0.08]" />
           <div className="relative mx-auto flex max-w-7xl flex-col gap-3 px-5 py-4 text-xs text-white/35 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-10 lg:py-5">
-            <div className="flex items-center gap-3"><div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 text-[11px] font-bold text-white shadow-lg shadow-indigo-500/25">P</div><span>pomah/living — neural property os</span></div>
+            <div>pomah/living — neural property os</div>
             <div>© 2026 pomah living ai — all systems nominal</div>
           </div>
         </footer>
