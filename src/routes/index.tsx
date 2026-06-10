@@ -19,14 +19,15 @@ function Landing() {
   return (
     <div className="h-screen overflow-hidden bg-[#d7d0c7] p-3 sm:p-5 lg:p-7 selection:bg-indigo-500/30">
       <div className="flex h-full flex-col overflow-hidden rounded-[28px] sm:rounded-[38px] lg:rounded-[56px] border border-white/70 bg-[#02050a] shadow-[0_35px_100px_rgba(15,23,42,0.35)]">
-        <header className="relative z-[999] shrink-0 isolation-isolate overflow-hidden rounded-t-[28px] rounded-b-none bg-transparent sm:rounded-t-[38px] lg:rounded-t-[56px]">
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-transparent" />
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.12),transparent_58%)]" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/[0.08]" />
+        <header className="relative z-[999] shrink-0 isolation-isolate overflow-hidden rounded-t-[28px] rounded-b-none border-b border-white/10 bg-white/[0.055] shadow-[0_22px_70px_rgba(2,5,10,0.24)] backdrop-blur-2xl backdrop-saturate-150 sm:rounded-t-[38px] lg:rounded-t-[56px]">
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white/[0.10] via-white/[0.035] to-white/[0.015]" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.18),transparent_62%)]" />
+          <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-white/40" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/[0.10]" />
           <div className="relative mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10 lg:py-5">
             <Link to="/" className="flex items-center gap-3 group"><img src="/logo.png" alt="Pomah Living" className="h-10 w-auto object-contain lg:h-12" /><span className="text-lg font-semibold tracking-tight text-white lg:text-xl">pomah<span className="text-indigo-400">/living</span></span></Link>
-            <nav className="hidden items-center gap-12 text-base font-medium md:flex">{["Agents", "Stats", "Pricing"].map((item) => <a key={item} href={`#${item.toLowerCase()}`} className="text-white/42 transition-colors hover:text-white/85">{item}</a>)}</nav>
-            <Link to="/auth"><Button className="h-11 rounded-full bg-white px-7 text-base font-semibold text-slate-950 hover:bg-white/90 lg:h-12 lg:px-8">Get started</Button></Link>
+            <nav className="hidden items-center gap-12 text-base font-medium md:flex">{["Agents", "Stats", "Pricing"].map((item) => <a key={item} href={`#${item.toLowerCase()}`} className="text-white/50 transition-colors hover:text-white/90">{item}</a>)}</nav>
+            <Link to="/auth"><Button className="h-11 rounded-full bg-white/90 px-7 text-base font-semibold text-slate-950 shadow-lg shadow-white/10 hover:bg-white lg:h-12 lg:px-8">Get started</Button></Link>
           </div>
         </header>
 
