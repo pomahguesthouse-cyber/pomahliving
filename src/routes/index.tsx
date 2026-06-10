@@ -19,15 +19,18 @@ function Landing() {
   return (
     <div className="h-screen overflow-hidden bg-[#d7d0c7] p-3 sm:p-5 lg:p-7 selection:bg-indigo-500/30">
       <div className="flex h-full flex-col overflow-hidden rounded-[28px] sm:rounded-[38px] lg:rounded-[56px] border border-white/70 bg-[#02050a] shadow-[0_35px_100px_rgba(15,23,42,0.35)]">
-        <header className="relative z-[999] shrink-0 isolation-isolate overflow-hidden rounded-t-[28px] rounded-b-none border-b border-white/10 bg-white/[0.055] shadow-[0_22px_70px_rgba(2,5,10,0.24)] backdrop-blur-2xl backdrop-saturate-150 sm:rounded-t-[38px] lg:rounded-t-[56px]">
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white/[0.10] via-white/[0.035] to-white/[0.015]" />
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.18),transparent_62%)]" />
-          <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-white/40" />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-white/[0.10]" />
+        <header className="group/header relative z-[999] shrink-0 isolation-isolate overflow-hidden rounded-t-[28px] rounded-b-none border-b border-white/15 bg-white/[0.075] shadow-[0_28px_90px_rgba(2,5,10,0.32)] backdrop-blur-[34px] backdrop-saturate-200 transition-all duration-500 sm:rounded-t-[38px] lg:rounded-t-[56px]">
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white/[0.16] via-white/[0.055] to-white/[0.018]" />
+          <div className="pointer-events-none absolute inset-0 -z-10 opacity-45 [background-image:radial-gradient(rgba(255,255,255,0.18)_0.7px,transparent_0.7px)] [background-size:7px_7px]" />
+          <div className="pointer-events-none absolute -left-24 -top-28 -z-10 h-48 w-96 rounded-full bg-white/20 blur-3xl transition-opacity duration-700 group-hover/header:opacity-80" />
+          <div className="pointer-events-none absolute right-1/4 top-0 -z-10 h-28 w-72 rounded-full bg-indigo-400/20 blur-3xl" />
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(99,102,241,0.24),transparent_62%)]" />
+          <div className="pointer-events-none absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
           <div className="relative mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10 lg:py-5">
-            <Link to="/" className="flex items-center gap-3 group"><img src="/logo.png" alt="Pomah Living" className="h-10 w-auto object-contain lg:h-12" /><span className="text-lg font-semibold tracking-tight text-white lg:text-xl">pomah<span className="text-indigo-400">/living</span></span></Link>
-            <nav className="hidden items-center gap-12 text-base font-medium md:flex">{["Agents", "Stats", "Pricing"].map((item) => <a key={item} href={`#${item.toLowerCase()}`} className="text-white/50 transition-colors hover:text-white/90">{item}</a>)}</nav>
-            <Link to="/auth"><Button className="h-11 rounded-full bg-white/90 px-7 text-base font-semibold text-slate-950 shadow-lg shadow-white/10 hover:bg-white lg:h-12 lg:px-8">Get started</Button></Link>
+            <Link to="/" className="flex items-center gap-3 group"><img src="/logo.png" alt="Pomah Living" className="h-10 w-auto object-contain drop-shadow-[0_10px_24px_rgba(255,255,255,0.18)] lg:h-12" /><span className="text-lg font-semibold tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)] lg:text-xl">pomah<span className="text-indigo-300">/living</span></span></Link>
+            <nav className="hidden items-center gap-12 text-base font-medium md:flex">{["Agents", "Stats", "Pricing"].map((item) => <a key={item} href={`#${item.toLowerCase()}`} className="text-white/58 transition-colors hover:text-white/95">{item}</a>)}</nav>
+            <Link to="/auth"><Button className="h-11 rounded-full border border-white/40 bg-white/85 px-7 text-base font-semibold text-slate-950 shadow-[0_10px_34px_rgba(255,255,255,0.16)] backdrop-blur-xl hover:bg-white lg:h-12 lg:px-8">Get started</Button></Link>
           </div>
         </header>
 
